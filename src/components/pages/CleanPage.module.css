@@ -1,0 +1,279 @@
+/* CleanPage Module CSS - Following styling.json guidelines */
+
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  background-color: #EAF4F4;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  opacity: 75%;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 1rem;
+  background-color: #cce3de;
+  border-color: #a8d5cc;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e0f0ed;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.scanStatus {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #D1E4E0;
+  border: 1px solid #a8d5cc;
+  margin-bottom: 1.5rem;
+}
+
+.scanStatusText {
+  font-size: 0.875rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+  opacity: 75%;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.categoryCard {
+  padding: 1rem;
+  background-color: #EAF4F4;
+  border-color: #a8d5cc;
+  border-radius: 0.5rem;
+  border: 1px solid #a8d5cc;
+}
+
+.categoryContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.categoryIcon {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #D1E4E0;
+}
+
+.categoryLabel {
+  font-size: 0.875rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+  opacity: 75%;
+  text-transform: capitalize;
+}
+
+.categorySize {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+}
+
+.cleanupCard {
+  padding: 1.5rem;
+  background-color: #EAF4F4;
+  border-color: #a8d5cc;
+  border-radius: 0.5rem;
+  border: 1px solid #a8d5cc;
+}
+
+.cleanupHeader {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+}
+
+.cleanupList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cleanupItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #EAF4F4;
+  border: 1px solid #a8d5cc;
+  min-height: 64px;
+  transition: all 200ms;
+}
+
+.cleanupItem:hover {
+  background-color: #D1E4E0;
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.itemCheckbox {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.25rem;
+  accent-color: #6b9080;
+}
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.itemTitle {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.itemDescription {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+  opacity: 75%;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.itemSize {
+  text-align: right;
+}
+
+.sizeText {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cleanedBadge {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.cleanButton {
+  height: 40px;
+  width: 64px;
+  min-width: 64px;
+  min-height: 40px;
+  border-color: #a8d5cc;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  background-color: #cce3de;
+  transition: all 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cleanButton:hover {
+  background-color: #e0f0ed;
+}
+
+.cleanButton:disabled {
+  background-color: #e0f0ed;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b9080;
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b9080;
+}

@@ -1,0 +1,279 @@
+/* Container Spacing */
+.wrapper {
+  padding: var(--pdf-container-padding);
+}
+
+/* Typography Theme */
+.theme {
+  color: var(--pdf-text-primary);
+  font-family: var(--pdf-font);
+}
+
+.heading {
+  font-size: var(--pdf-heading-size);
+  font-weight: var(--pdf-heading-weight);
+  margin-bottom: var(--pdf-heading-margin);
+  color: var(--pdf-text-primary);
+  font-family: var(--pdf-font);
+}
+
+.sub {
+  font-size: var(--pdf-description-size);
+  font-weight: var(--pdf-description-weight);
+  margin-bottom: var(--pdf-description-margin);
+  opacity: var(--pdf-text-opacity);
+  color: var(--pdf-text-primary);
+  font-family: var(--pdf-font);
+}
+
+/* Button Styles */
+.modeBtn {
+  background: var(--pdf-bg-transparent);
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--pdf-button-border-radius);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--pdf-transition-colors);
+  font-size: var(--pdf-button-font-size);
+  font-weight: var(--pdf-button-font-weight);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+  min-height: var(--pdf-button-height);
+}
+
+.modeBtn:hover {
+  background: var(--pdf-bg-button-hover);
+}
+
+.modeBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 144, 128, 0.5);
+}
+
+.modeBtn:active {
+  background: var(--pdf-bg-button);
+  transform: translateY(1px);
+}
+
+.modeBtnActive {
+  background: var(--pdf-bg-button);
+}
+
+/* Drop Zone */
+.dropZone {
+  border: 2px dashed var(--pdf-border-primary);
+  background: var(--pdf-bg-item);
+  cursor: pointer;
+  padding: 2.5rem 1.5rem;
+  border-radius: var(--pdf-item-border-radius);
+  transition: var(--pdf-transition-all);
+}
+
+.dropZone:hover {
+  background: var(--pdf-bg-hover);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dropIconWrap {
+  background: var(--pdf-bg-button);
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  padding: 1rem;
+  border-radius: 9999px;
+  transition: var(--pdf-transition-transform);
+}
+
+.group:hover .dropIconWrap {
+  transform: scale(1.05);
+}
+
+/* Text Elements */
+.smallNote {
+  font-size: 12px;
+  opacity: 0.6;
+  color: var(--pdf-text-primary);
+  font-family: var(--pdf-font);
+}
+
+/* Error State */
+.errorBox {
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  background: #ffecec;
+  border-radius: var(--pdf-item-border-radius);
+  color: var(--pdf-text-primary);
+  font-family: var(--pdf-font);
+}
+
+/* File Items */
+.fileItem {
+  background: var(--pdf-bg-item);
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  border-radius: var(--pdf-item-border-radius);
+  height: var(--pdf-item-height);
+  padding-left: var(--pdf-item-padding-left);
+  padding-right: var(--pdf-item-padding-right);
+  gap: var(--pdf-item-gap);
+  transition: var(--pdf-transition-colors);
+}
+
+.fileItem:hover {
+  background: var(--pdf-bg-item-hover);
+}
+
+.fileIconBox {
+  background: #fff;
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  padding: 0.5rem;
+  border-radius: var(--pdf-button-border-radius);
+}
+
+/* Icon Buttons */
+.iconBtn {
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  border-radius: var(--pdf-button-border-radius);
+  transition: var(--pdf-transition-colors);
+  color: var(--pdf-text-primary);
+  font-family: var(--pdf-font);
+  background: var(--pdf-bg-transparent);
+}
+
+.iconBtn:hover:not(:disabled) {
+  background: var(--pdf-bg-button-hover);
+}
+
+.iconBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 144, 128, 0.5);
+}
+
+.iconBtn:active:not(:disabled) {
+  background: var(--pdf-bg-button);
+  transform: translateY(1px);
+}
+
+/* Primary Button */
+.primaryBtn {
+  background: var(--pdf-bg-button);
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  border-radius: var(--pdf-button-border-radius);
+  font-size: var(--pdf-button-font-size);
+  font-weight: var(--pdf-button-font-weight);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+  height: var(--pdf-button-height);
+  min-height: var(--pdf-button-height);
+  transition: var(--pdf-transition-colors);
+}
+
+.primaryBtn:hover {
+  background: var(--pdf-bg-button-hover);
+}
+
+.primaryBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 144, 128, 0.5);
+}
+
+.primaryBtn:active {
+  background: var(--pdf-bg-button);
+  transform: translateY(1px);
+}
+
+/* Outline Button */
+.outlineBtn {
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  border-radius: var(--pdf-button-border-radius);
+  font-size: var(--pdf-button-font-size);
+  font-weight: var(--pdf-button-font-weight);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+  height: var(--pdf-button-height);
+  min-height: var(--pdf-button-height);
+  transition: var(--pdf-transition-colors);
+  background: var(--pdf-bg-transparent);
+}
+
+.outlineBtn:hover {
+  background: var(--pdf-bg-button-hover);
+}
+
+.outlineBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 144, 128, 0.5);
+}
+
+.outlineBtn:active {
+  background: var(--pdf-bg-button);
+  transform: translateY(1px);
+}
+
+/* Operation Cards */
+.operationCard {
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  border-radius: var(--pdf-item-border-radius);
+  background: var(--pdf-bg-item);
+  transition: var(--pdf-transition-all);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+}
+
+.operationCard:hover {
+  background: var(--pdf-bg-hover);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.operationCard:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 144, 128, 0.5);
+}
+
+.operationCard:active {
+  background: var(--pdf-bg-button);
+  transform: translateY(1px);
+}
+
+.operationCardIcon {
+  background: var(--pdf-bg-button);
+  border: var(--pdf-button-border-width) solid var(--pdf-border-primary);
+  border-radius: var(--pdf-button-border-radius);
+}
+
+.operationCardTitle {
+  font-size: var(--pdf-item-title-size);
+  font-weight: var(--pdf-item-title-weight);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+  margin-bottom: var(--pdf-item-title-margin);
+}
+
+.operationCardDesc {
+  font-size: var(--pdf-item-desc-size);
+  font-weight: var(--pdf-item-desc-weight);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+  opacity: var(--pdf-text-opacity);
+}
+
+/* Form Elements */
+.formText {
+  font-size: var(--pdf-item-desc-size);
+  font-weight: var(--pdf-item-desc-weight);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+  opacity: var(--pdf-text-opacity);
+}
+
+.formLabel {
+  font-size: var(--pdf-item-title-size);
+  font-weight: var(--pdf-item-title-weight);
+  font-family: var(--pdf-font);
+  color: var(--pdf-text-primary);
+}
+
+/* CSS Variables - Values will be set dynamically from styling.json */
+:root {
+  --pdf-item-bg: #EAF4F4;
+  --pdf-border-primary: #6b9080;
+  --pdf-bg-button: #cce3de;
+}

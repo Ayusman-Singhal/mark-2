@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         IgnorableNamespaces="uap rescap">
+
+  <Identity Name="Technican.Document Converter"
+            Publisher="CN=BAA8767D-4FEA-4F18-A470-55D2F92BCF77"
+            Version="1.0.2.0" />
+
+  <Properties>
+    <DisplayName>Document Converter</DisplayName>
+    <PublisherDisplayName>Technican</PublisherDisplayName>
+    <Description>Professional system diagnostic and repair tool for Windows computers</Description>
+    <Logo>assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop"
+                        MinVersion="10.0.17763.0"
+                        MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-US" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App" 
+                 Executable="technician-app.exe" 
+                 EntryPoint="Windows.FullTrustApplication">
+      
+      <uap:VisualElements DisplayName="Document Converter"
+                          Description="Professional system diagnostic and repair tool"
+                          Square44x44Logo="assets\Square44x44Logo.png"
+                          Square150x150Logo="assets\Square150x150Logo.png"
+                          BackgroundColor="#2a2a2a">
+        
+        <uap:DefaultTile Wide310x150Logo="assets\Wide310x150Logo.png"
+                         Square71x71Logo="assets\Square71x71Logo.png"
+                         ShortName="Document Converter">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        
+      </uap:VisualElements>
+      
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+
+</Package>

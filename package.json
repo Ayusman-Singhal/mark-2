@@ -1,0 +1,144 @@
+{
+  "name": "technican.Document Converter",
+  "version": "1.0.0",
+  "description": "Document Converter - Professional system diagnostic and repair tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run build && electron .",
+    "dev": "electron . --dev",
+    "build": "npm run build:react && npm run build:electron",
+    "build:react": "vite build",
+    "build:electron": "electron-packager . technician-app --platform=win32 --arch=x64 --out=release --overwrite --icon=public/assets/icon.ico",
+    "build:exe": "npm run build:react && npm run dist",
+    "dist": "npm run build:react && electron-builder --publish=never",
+    "dist:publish": "npm run build:react && electron-builder --publish=always",
+    "electron": "electron .",
+    "try": "npm run build:react && npm run dev"
+  },
+  "keywords": [
+    "electron",
+    "desktop",
+    "app",
+    "technician",
+    "system-repair",
+    "diagnostics"
+  ],
+  "author": "Technican",
+  "license": "MIT",
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-collapsible": "^1.1.12",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@tsparticles/engine": "^3.9.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
+    "@vitejs/plugin-react": "^5.0.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "core-util-is": "^1.0.3",
+    "docx": "^9.5.1",
+    "exceljs": "^4.4.0",
+    "framer-motion": "^12.23.12",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.542.0",
+    "mammoth": "^1.11.0",
+    "motion": "^12.23.12",
+    "netstat": "^0.0.2",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.8.69",
+    "pptxgenjs": "^3.12.0",
+    "ps-list": "^8.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
+    "tesseract.js": "^7.0.0",
+    "vaul": "^1.1.2",
+    "vite": "^7.1.4",
+    "winreg": "^1.2.5",
+    "ytdl-core": "^4.9.2"
+  },
+  "overrides": {},
+  "pnpm": {},
+  "resolutions": {},
+  "dependenciesMeta": {},
+  "trustedDependencies": [],
+  "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "electron": "^27.0.0",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2",
+    "postcss": "^8.5.6",
+    "shadcn": "^3.2.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "build": {
+    "appId": "Technican.Document Converter",
+    "productName": "Document Converter",
+    "directories": {
+      "output": "release"
+    },
+    "npmRebuild": false,
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "public/assets",
+        "to": "assets"
+      }
+    ],
+    "publish": {
+      "provider": "generic",
+      "url": "https://your-update-server.com/"
+    },
+    "win": {
+      "icon": "public/assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "appx": {
+      "applicationId": "MyTechnician",
+      "identityName": "Technican.Document Converter",
+      "publisher": "CN=BAA8767D-4FEA-4F18-A470-55D2F92FCF77",
+      "publisherDisplayName": "Technican",
+      "showNameOnTiles": true,
+      "setBuildNumber": true
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "allowElevation": true
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    }
+  }
+}

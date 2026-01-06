@@ -1,0 +1,175 @@
+{
+  "fonts": {
+    "primary": "Atkinson Hyperlegible, sans-serif"
+  },
+  "colors": {
+    "text": {
+      "primary": "#000000",
+      "opacity75": "#000000 (opacity: 75%)"
+    },
+    "background": {
+      "hover": "#D1E4E0",
+      "itemBackground": "#EAF4F4",
+      "itemHover": "#D1E4E0",
+      "buttonBackground": "#cce3de",
+      "buttonHover": "#e0f0ed",
+      "transparent": "transparent"
+    },
+    "border": {
+      "primary": "#a8d5cc",
+      "buttonBorder": "#a8d5cc"
+    },
+    "scrollbar": {
+      "thumb": "#6b9080",
+      "thumbHover": "#6b9080",
+      "track": "transparent"
+    },
+    "button": {
+      "stopBackground": "red-500",
+      "stopHover": "red-800",
+      "stopText": "white"
+    }
+  },
+  "dimensions": {
+    "accordion": {
+      "height": "64px"
+    },
+    "item": {
+      "height": "64px"
+    },
+    "button": {
+      "height": "40px",
+      "width": "64px",
+      "minHeight": "40px",
+      "minWidth": "64px"
+    },
+    "scrollbar": {
+      "width": "5px",
+      "borderRadius": "2.5px"
+    }
+  },
+  "typography": {
+    "heading": {
+      "fontSize": "3rem",
+      "fontWeight": "300",
+      "marginBottom": "1rem",
+      "fontFamily": "Atkinson Hyperlegible, sans-serif",
+      "color": "#000000"
+    },
+    "description": {
+      "fontSize": "1rem",
+      "fontWeight": "400",
+      "marginBottom": "2rem",
+      "opacity": "75%",
+      "fontFamily": "Atkinson Hyperlegible, sans-serif",
+      "color": "#000000"
+    },
+    "accordionTrigger": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "fontFamily": "Atkinson Hyperlegible, sans-serif",
+      "color": "#000000"
+    },
+    "itemTitle": {
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "fontFamily": "Atkinson Hyperlegible, sans-serif",
+      "color": "#000000",
+      "marginBottom": "4px"
+    },
+    "itemDescription": {
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "fontFamily": "Atkinson Hyperlegible, sans-serif",
+      "color": "#000000",
+      "opacity": "75%"
+    },
+    "button": {
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "fontFamily": "Atkinson Hyperlegible, sans-serif",
+      "color": "#000000"
+    }
+  },
+  "spacing": {
+    "container": {
+      "padding": "2rem"
+    },
+    "accordion": {
+      "width": "100%",
+      "paddingHorizontal": "2rem"
+    },
+    "accordionTrigger": {
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gap": "12px"
+    },
+    "accordionContent": {
+      "paddingLeft": "1.75rem",
+      "paddingBottom": "0.5rem"
+    },
+    "item": {
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
+      "gap": "1rem"
+    }
+  },
+  "borders": {
+    "accordion": {
+      "border": "0"
+    },
+    "button": {
+      "borderColor": "#a8d5cc",
+      "borderWidth": "1px",
+      "borderRadius": "0.5rem"
+    },
+    "item": {
+      "borderRadius": "0.5rem"
+    }
+  },
+  "transitions": {
+    "all": "transition-all",
+    "colors": "transition-colors",
+    "transform": "transition-transform duration-200"
+  },
+  "animations": {
+    "fadeIn": "animate-fade-in",
+    "chevronRotation": "[&[data-state=open]>svg]:rotate-180"
+  },
+  "icons": {
+    "size": 16,
+    "strokeWidth": 2.5,
+    "opacity": "60%"
+  },
+  "states": {
+    "hover": {
+      "accordionTrigger": "#D1E4E0",
+      "item": "#D1E4E0", 
+      "button": "#e0f0ed"
+    },
+    "focus": {
+      "ringColor": "ring-ring/50",
+      "ringWidth": "3px",
+      "borderColor": "border-ring"
+    }
+  },
+  "layout": {
+    "flexDirection": "column",
+    "alignItems": "center",
+    "justifyContent": "between",
+    "gap": "1rem"
+  },
+  "css": {
+    "scrollbar": {
+      "selector": "::-webkit-scrollbar",
+      "width": "5px",
+      "trackSelector": "::-webkit-scrollbar-track",
+      "trackBackground": "transparent",
+      "thumbSelector": "::-webkit-scrollbar-thumb",
+      "thumbBackground": "#6b9080",
+      "thumbBorderRadius": "2.5px",
+      "thumbHoverSelector": "::-webkit-scrollbar-thumb:hover",
+      "thumbHoverBackground": "#6b9080"
+    }
+  }
+}

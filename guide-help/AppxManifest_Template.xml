@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+MSIX AppxManifest.xml Template
+This template provides a complete example of an AppxManifest.xml file for MSIX packages.
+Copy this template and modify the values to match your application.
+-->
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         IgnorableNamespaces="uap rescap">
+
+  <!-- 
+  IDENTITY SECTION
+  Uniquely identifies your package. These values must be consistent across updates.
+  -->
+  <Identity Name="YourCompany.YourAppName"
+            Publisher="CN=YOUR-PUBLISHER-NAME"
+            Version="1.0.0.0" />
+  
+  <!--
+  Name: Unique package identifier (reverse domain notation recommended)
+        Example: "com.contoso.myapp" or "Contoso.MyApplication"
+  
+  Publisher: Certificate subject name in CN= format
+            Must match your code signing certificate
+            For testing: CN=TestPublisher
+            For Store: Provided by Microsoft Partner Center
+  
+  Version: Four-part version number (Major.Minor.Build.Revision)
+           Must increment for each update
+           Example: 1.2.3.4
+  -->
+
+  <!-- 
+  PROPERTIES SECTION
+  Display information shown to users in various Windows interfaces
+  -->
+  <Properties>
+    <DisplayName>Your Application Name</DisplayName>
+    <PublisherDisplayName>Your Company Name</PublisherDisplayName>
+    <Description>Brief description of your application (max 2048 characters)</Description>
+    <Logo>assets\StoreLogo.png</Logo>
+    <!-- Optional properties -->
+    <!-- <PackageIntegrityLevel>fullTrust</PackageIntegrityLevel> -->
+    <!-- <PackageIntegrityLevel>mediumIL</PackageIntegrityLevel> -->
+  </Properties>
+
+  <!-- 
+  DEPENDENCIES SECTION
+  Specifies the minimum Windows version your app supports
+  -->
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop"
+                        MinVersion="10.0.17763.0"
+                        MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+  
+  <!--
+  Common Windows versions:
+  10.0.10240.0 - Windows 10 RTM (1507)
+  10.0.14393.0 - Windows 10 Anniversary Update (1607)
+  10.0.15063.0 - Windows 10 Creators Update (1703)
+  10.0.16299.0 - Windows 10 Fall Creators Update (1709) - First to support MSIX
+  10.0.17134.0 - Windows 10 April 2018 Update (1803)
+  10.0.17763.0 - Windows 10 October 2018 Update (1809)
+  10.0.18362.0 - Windows 10 May 2019 Update (1903)
+  10.0.18363.0 - Windows 10 November 2019 Update (1909)
+  10.0.19041.0 - Windows 10 May 2020 Update (2004)
+  10.0.22000.0 - Windows 11
+  10.0.26100.0 - Windows 11 24H2
+  -->
+
+  <!-- 
+  RESOURCES SECTION
+  Defines supported languages and scaling factors
+  -->
+  <Resources>
+    <Resource Language="en-US" />
+    <!-- Add more languages as needed -->
+    <!-- <Resource Language="es-ES" /> -->
+    <!-- <Resource Language="fr-FR" /> -->
+    <!-- <Resource Language="de-DE" /> -->
+  </Resources>
+
+  <!-- 
+  APPLICATIONS SECTION
+  Defines your application executable and visual presentation
+  -->
+  <Applications>
+    <Application Id="App" 
+                 Executable="YourApp.exe" 
+                 EntryPoint="Windows.FullTrustApplication">
+      
+      <!-- Visual Elements define how your app appears in Windows -->
+      <uap:VisualElements DisplayName="Your Application Name"
+                          Description="Your application description"
+                          Square44x44Logo="assets\Square44x44Logo.png"
+                          Square150x150Logo="assets\Square150x150Logo.png"
+                          BackgroundColor="transparent">
+        
+        <!-- Default Tile configuration -->
+        <uap:DefaultTile Wide310x150Logo="assets\Wide310x150Logo.png"
+                         Square71x71Logo="assets\Square71x71Logo.png"
+                         Square310x310Logo="assets\Square310x310Logo.png"
+                         ShortName="YourApp">
+          <!-- Optional: Show app name on tiles -->
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        
+        <!-- Optional: Splash Screen -->
+        <uap:SplashScreen Image="assets\SplashScreen.png" 
+                          BackgroundColor="transparent" />
+        
+        <!-- Optional: Lock Screen Badge -->
+        <!-- <uap:LockScreen Badge="assets\BadgeLogo.png" Notification="badge"/> -->
+        
+      </uap:VisualElements>
+      
+      <!-- Optional: File Type Associations -->
+      <!--
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="myfiletype">
+            <uap:DisplayName>My File Type</uap:DisplayName>
+            <uap:Logo>assets\FileTypeLogo.png</uap:Logo>
+            <uap:InfoTip>Opens with Your App</uap:InfoTip>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.myext</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+      -->
+      
+    </Application>
+  </Applications>
+
+  <!-- 
+  CAPABILITIES SECTION
+  Declares what system resources your app needs access to
+  Only include capabilities your app actually uses
+  -->
+  <Capabilities>
+    <!-- Required for Win32/.NET applications -->
+    <rescap:Capability Name="runFullTrust" />
+    
+    <!-- Common capabilities (uncomment as needed) -->
+    <!-- <Capability Name="internetClient" /> -->
+    <!-- <Capability Name="internetClientServer" /> -->
+    <!-- <Capability Name="privateNetworkClientServer" /> -->
+    <!-- <Capability Name="documentsLibrary" /> -->
+    <!-- <Capability Name="picturesLibrary" /> -->
+    <!-- <Capability Name="videosLibrary" /> -->
+    <!-- <Capability Name="musicLibrary" /> -->
+    <!-- <Capability Name="enterpriseAuthentication" /> -->
+    <!-- <Capability Name="sharedUserCertificates" /> -->
+    <!-- <Capability Name="removableStorage" /> -->
+    
+    <!-- Restricted capabilities (require special approval) -->
+    <!-- <rescap:Capability Name="broadFileSystemAccess" /> -->
+    <!-- <rescap:Capability Name="confirmAppClose" /> -->
+    <!-- <rescap:Capability Name="packagedServices" /> -->
+    <!-- <rescap:Capability Name="allowElevation" /> -->
+  </Capabilities>
+
+  <!-- 
+  Optional: PREREQUISITES SECTION
+  Specify framework dependencies
+  -->
+  <!--
+  <Prerequisites>
+    <PackageDependency Name="Microsoft.VCLibs.140.00" 
+                       MinVersion="14.0.24217.1" 
+                       Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+    <PackageDependency Name="Microsoft.NET.Native.Runtime.2.2" 
+                       MinVersion="2.2.28604.0" 
+                       Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+  </Prerequisites>
+  -->
+
+</Package>
+
+<!--
+ASSET REQUIREMENTS:
+Place these image files in the 'assets' folder:
+
+Required Assets:
+- StoreLogo.png (50x50) - Used in Store listings
+- Square44x44Logo.png (44x44) - App list icon
+- Square150x150Logo.png (150x150) - Medium Start tile
+- Wide310x150Logo.png (310x150) - Wide Start tile  
+- Square71x71Logo.png (71x71) - Small Start tile
+
+Optional Assets:
+- Square310x310Logo.png (310x310) - Large Start tile
+- SplashScreen.png (620x300) - App launch screen
+- BadgeLogo.png (24x24) - Lock screen badge
+
+ASSET GUIDELINES:
+- Use PNG format
+- Transparent backgrounds recommended
+- High contrast for visibility
+- Follow Microsoft design guidelines
+- Test on both light and dark themes
+
+PACKAGE CREATION COMMAND:
+& "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\makeappx.exe" pack /d AppLayout /p YourApp.msix /o
+
+SIGNING COMMAND (if you have a certificate):
+& "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\signtool.exe" sign /f certificate.pfx /p password /fd SHA256 YourApp.msix
+-->
